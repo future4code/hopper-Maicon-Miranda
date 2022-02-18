@@ -98,7 +98,7 @@ function retornaUltimoElemento(array) {
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
   // implemente sua lógica aqui
-
+ 
 }
 
 // EXERCÍCIO 12
