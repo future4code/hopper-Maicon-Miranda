@@ -45,11 +45,8 @@ function retornaNumerosPares(array) {
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
-  
-    
-  
+    //tentar com push
 }
-
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
@@ -58,7 +55,18 @@ function retornaMaiorNumero(array) {
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
+  const maiorNumero2 = Math.max(num1, num2)
+  const menorNumero2 = Math.min(num1, num2)
+  
+  const resultado = ((maiorNumero2 % menorNumero2) === 0)
+  
+  let diferenca2 = maiorNumero2 - menorNumero2
 
+   return objeto = {
+    maiorNumero: maiorNumero2 ,
+    maiorDivisivelPorMenor: resultado ,
+    diferenca: diferenca2
+  }
 }
 
 // EXERCÍCIO 08
