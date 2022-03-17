@@ -22,7 +22,17 @@ function retornaArrayInvertido(array) {
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-    
+   let novoArray = array.sort((a,b) => {
+   if (a < b) {
+     return -1
+   }
+   if (a > b) {
+     return 1
+   }
+   return 0
+})
+   return novoArray
+   
 }
 
 // EXERCÍCIO 04
