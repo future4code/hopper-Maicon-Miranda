@@ -37,7 +37,10 @@ function retornaArrayOrdenado(array) {
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-  
+  const numerosPares = (numeroPar) =>{
+    return numeroPar % 2 === 0
+  }
+  return array.filter(numerosPares)
 }
 
 // EXERCÍCIO 05
