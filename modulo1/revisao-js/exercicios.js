@@ -146,5 +146,8 @@ return consultas
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-   
+ result = consultas.reduce((a, b) => a.dataDaConsulta > b.dataDaConsulta ? a : b) 
+ return consultas
 }
+
+
