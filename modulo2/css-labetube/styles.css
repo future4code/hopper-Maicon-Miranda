@@ -1,0 +1,91 @@
+
+* {
+    margin: 0;
+    padding: 0;
+ }
+ 
+
+header{
+    background: gray;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-right: -20px;
+    
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+}
+
+main .video-card {
+    box-shadow: 2px 2px 5px black;
+    text-align: center;
+    width: 300px;
+    height: px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;    
+ }
+
+ .card-video{
+    width: 299px;
+}
+
+
+.titulo-video{
+    color: black;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* justify ele segue o sentido principal => main axios */
+    align-items: center;
+    /*  align ele segue o sentido contrario ao principal => cross axios */
+    grid-column: 1/-1;
+    margin-top: -10%;
+
+}
+
+.video-container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* justify ele segue o sentido principal => main axios */
+    align-items: center;
+    /*  align ele segue o sentido contrario ao principal => cross axios */
+    grid-column: 1/-1;
+    margin-top: -22%;
+
+}
+
+
+footer{
+    background-color: gray;
+    height: 60px;
+    width: 100vw;
+ 
+    position: relative;
+    bottom: 0;
+ 
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* justify ele segue o sentido principal => main axios */
+    align-items: center;
+    /*  align ele segue o sentido contrario ao principal => cross axios */
+ 
+    grid-column: 1/-1;
+
+}
