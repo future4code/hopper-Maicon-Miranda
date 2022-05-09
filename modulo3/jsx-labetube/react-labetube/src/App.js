@@ -1,72 +1,65 @@
 import React from 'react';
-import './App.css';
+import "./styles.css";
+import CardVideo from "./Components/CardVideo";
+import ItemNav from "./Components/ItemNav";
+import styled from "styled-components";
+
+const Footer = styled.section`
+  height: 10%;
+  background-color: purple;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  h4 {
+    color: white;
+  }
+`;
+
+const MenuVertical = styled.nav`
+  flex-basis: 200px;
+  border-right-style: solid;
+  border-right-width: thin;
+`;
 
 function App() {
-  const titulo = "Título do vídeo"
-
-  function reproduzVideo() {
-    alert("O vídeo está sendo reproduzido")
-}
-
   return (
-    <div>
+    <div className="App">
+      
       <div className="tela-inteira">
         <header>
-            <h1>Lab Tube</h1>
-            <input type="text" placeholder="Busca" id="campoDeBusca"/>
+          <h1>Lab Tube</h1>
+          <input type="text" placeholder="Busca" id="campoDeBusca" />
         </header>
 
         <main>
-            <nav className="menu-vertical">
-                <ul>
-                    <li className="botoes-meunu-vertical">Início</li>
-                    <li className="botoes-meunu-vertical">Em alta</li>
-                    <li className="botoes-meunu-vertical">Inscrições</li>
-                    <hr/>
-                    <li className="botoes-meunu-vertical">Originais</li>
-                    <li className="botoes-meunu-vertical">Histórico</li>
-                </ul>
-            </nav>
+          <MenuVertical>
+            <ul>
+              <ItemNav titulo="Inicio" />
+              <ItemNav titulo="Em alta " />
+              <hr />
+              <ItemNav titulo="Inscrições" />
+              <ItemNav titulo="Originais " />
+              <ItemNav titulo="Biblioteca" />
+              <ItemNav titulo="Histórico" />
+            </ul>
+          </MenuVertical>
 
-            <section className="painel-de-videos">
-                <div className="box-pagina-principal media1" onClick={reproduzVideo}>
-                    <img src="https://picsum.photos/400/400?a=1 " alt=""/>
-                    <h4>{titulo}</h4>
-                </div>
-                <div className="box-pagina-principal media2" onClick={reproduzVideo}>
-                    <img src="https://picsum.photos/400/400?a=2 " alt=""/>
-                    <h4>{titulo}</h4>
-                </div>
-                <div className="box-pagina-principal media3" onClick={reproduzVideo}>
-                    <img src="https://picsum.photos/400/400?a=3 " alt=""/>
-                    <h4>{titulo}</h4>
-                </div>
-                <div className="box-pagina-principal media4" onClick={reproduzVideo}>
-                    <img src="https://picsum.photos/400/400?a=4 " alt=""/>
-                    <h4>{titulo}</h4>
-                </div>
-                <div className="box-pagina-principal media5" onClick={reproduzVideo}>
-                    <img src="https://picsum.photos/400/400?a=5 " alt=""/>
-                    <h4>{titulo}</h4>
-                </div>
-                <div className="box-pagina-principal media6" onClick={reproduzVideo}>
-                    <img src="https://picsum.photos/400/400?a=6 " alt=""/>
-                    <h4>{titulo}</h4>
-                </div>
-                <div className="box-pagina-principal media7" onClick={reproduzVideo}>
-                    <img src="https://picsum.photos/400/400?a=7 " alt=""/>
-                    <h4>{titulo}</h4>
-                </div>
-                <div className="box-pagina-principal media8" onClick={reproduzVideo}>
-                    <img src="https://picsum.photos/400/400?a=8 " alt=""/>
-                    <h4>{titulo}</h4>
-                </div>
-            </section>
+          <section className="painel-de-videos">
+            <CardVideo numeroImagem="1" />
+            <CardVideo numeroImagem="2" />
+            <CardVideo numeroImagem="3" />
+            <CardVideo numeroImagem="4" />
+            <CardVideo numeroImagem="5" />
+            <CardVideo numeroImagem="6" />
+            <CardVideo numeroImagem="7" />
+            <CardVideo numeroImagem="8" />
+          </section>
         </main>
 
-        <footer>
-            <h4>Oi! Eu moro no footer!</h4>
-        </footer>
+        <Footer>
+          <h4>Oi! Eu moro no footer!</h4>
+        </Footer>
       </div>
     </div>
   );
