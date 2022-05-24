@@ -42,3 +42,14 @@ input {
   display: inline-flex;
 
 }
+
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5%;
+  font-size: larger;
+
+}
+

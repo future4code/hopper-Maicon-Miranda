@@ -1,6 +1,7 @@
 import React from "react"
 import TelaCadastro from "./Components/TelaCadastro"
 import TelaLista from "./Components/TelaLista"
+import './App.css';
 
 class App extends React.Component {
 
@@ -10,9 +11,7 @@ class App extends React.Component {
 
   trocarDeTela = () => {
     this.setState({
-      telaAtual: this.state.telaAtual === "cadastro"
-        ? "lista"
-        : "cadastro"
+      telaAtual: this.state.telaAtual === "cadastro" ? "lista" : "cadastro"
     })
   }
 
