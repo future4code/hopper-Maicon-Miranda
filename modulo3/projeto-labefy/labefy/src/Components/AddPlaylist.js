@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 
-
 class AddPlaylist extends React.Component {
 
   state = {
@@ -17,9 +16,7 @@ class AddPlaylist extends React.Component {
     this.setState({ inputPlaylist: event.target.value })
   }
 
-  onClickVisualisarPlaylist =() => {
-
-  }
+  //onClickVisualisarPlaylist =() => {}
 
   pegarPlaylist = () => {
 
@@ -42,7 +39,6 @@ class AddPlaylist extends React.Component {
       name: this.state.inputPlaylist
     }
 
-
     axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists', body, {
       headers: {
         Authorization: "maicon-miranda-hopper"
@@ -60,6 +56,8 @@ class AddPlaylist extends React.Component {
       })
   }
 
+  
+
   render() {
 
     const list = this.state.playlist.map((cadaPlaylist) => {
@@ -69,24 +67,18 @@ class AddPlaylist extends React.Component {
     return (
 
       <div>
+        <h1>Adicione uma playlist</h1>
         <input
           value={this.state.inputPlaylist}
           onChange={this.onChangeInput}
         />
         <button onClick={this.criarPlaylist}>Criar Playlist</button>
-        <button>Visualizar as minhas playlists</button>
-        <div>
-          {list}
-        </div>
+        <button onClick={this.props.pageOne}>Visualizar as minhas playlists</button>
+        
       </div>
 
     )
   }
 }
 
-
 export default AddPlaylist 
-
-
-
-
