@@ -5,11 +5,14 @@ class ListaPlaylist extends React.Component {
 
     state = {
         playlist: [],
+        //tracks: [],
     }
 
     componentDidMount() {
         this.pegarPlaylist()
+        //this.pegarTracks()
     }
+
 
     pegarPlaylist = () => {
 
@@ -26,7 +29,9 @@ class ListaPlaylist extends React.Component {
             })
     }
 
-    deletarPlaylis = (id) => {
+    
+
+    deletarPlaylist = (id) => {
 
         const url = `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}`
 
@@ -35,29 +40,41 @@ class ListaPlaylist extends React.Component {
                 Authorization: "maicon-miranda-hopper"
             }
         }).then(() => {
-            alert("Playlist apagada com sucesso.")
+            alert("Playlist excluída com sucesso.")
             this.pegarPlaylist()
         }).catch(() => {
             alert("Tente novamente mais tarde")
+            console.log("erro")
         })
     }
 
 
     render() {
 
-        const list = this.state.playlist.map((cadaPlaylist) => {
-            return <h3>{cadaPlaylist.name}</h3>
-          })
+        //const list = this.state.playlist.map((cadaPlaylist) => {
+        //    return <h3>{cadaPlaylist.name}</h3>
+        //})
+        
 
         return (
             <div>
-                <h1>tela lista</h1>
-                <button onClick={this.props.pageTwo}>Adicionar uma playlist</button>
-                {list}
-                
+                <button onClick={this.props.pageTwo}>Cadastrar playlist</button>
+                <h2>Lista de Playlists</h2>
+                {
+                    this.state.playlist.map((list) => {
+                        return (
+                            <ul>
+                                <li>{list.name}</li>
+                                <button onClick={() => this.deletarPlaylist(list.id)}>excluir</button>
+                                <button >Detalhes da Playlist</button>
+                            </ul>
+                        )
+                    })
+                }
             </div>
         )
     }
 }
 
 export default ListaPlaylist;
+

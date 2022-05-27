@@ -67,7 +67,7 @@ class AddPlaylist extends React.Component {
     return (
 
       <div>
-        <h1>Adicione uma playlist</h1>
+        <h1>Labefy!</h1>
         <input
           value={this.state.inputPlaylist}
           onChange={this.onChangeInput}
