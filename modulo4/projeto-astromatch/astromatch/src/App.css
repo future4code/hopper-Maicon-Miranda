@@ -1,0 +1,21 @@
+.App {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid;  
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-top: 5%;
+  text-align: center;
+  padding-bottom: 2%;
+
+
+
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  display: flex;
+
+}
