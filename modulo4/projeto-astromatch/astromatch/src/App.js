@@ -1,29 +1,15 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import TelaMatches from './components/TelaMatches';
 
 function App() {
 
-  /*
-  const [tela, setTela] = useState()
-   state = {
-    telaAtual: "cadastro"
 
-    function TrocarDeTela = () {
-      setTela({tela:})
-    }
-
-  }
-
-  trocarDeTela = () => {
-    this.setState({
-      telaAtual: this.state.telaAtual === "cadastro" ? "lista" : "cadastro"
-    })
-  }
-  */
-
+  const [changeScreen, setChangeScreen] = useState("home")
   const [profileList, setProfileList] = useState({})
   const [match, setMatch] = useState(null)
+
 
   useEffect(() => {
     RequestProfile()
@@ -47,23 +33,35 @@ function App() {
     })
       .then((response) => {
         setMatch(response.data.profile)
+        RequestProfile()
       })
   }
 
+  //function trocarDeTela () {
+  //  setChangeScreen(changeScreen === 'home' ? 'matches' : 'home')
+  //}
+
   return (
     <div className="App">
-      <h1>AstroMatch</h1>
 
-      <img src={profileList.photo} alt="Profile Img"/> <br />
-      <br />
-      {profileList.name} <br />
-      {profileList.age} <br />
-      {profileList.bio} <br />
-      <br />
 
-      <button button onClick={() => ChooseProfile(false)}>❌</button>
-      <button button onClick={() => ChooseProfile(true)}>❤️</button>
-      <button>Matches</button>
+         <h1>AstroMatch</h1>
+         
+
+
+      <img src={profileList.photo} alt="Profile Img" /> <br />
+        <br />
+        {profileList.name} <br />
+        {profileList.age} <br />
+        {profileList.bio} <br />
+        <br />
+
+      <button onClick={() => ChooseProfile(false)}>❌</button>
+      <button onClick={() => ChooseProfile(true)}>❤️</button> 
+      
+      
+
+
 
     </div>
   );
