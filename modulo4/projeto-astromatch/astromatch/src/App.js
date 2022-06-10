@@ -6,7 +6,7 @@ import TelaMatches from './components/TelaMatches';
 function App() {
 
 
-  const [changeScreen, setChangeScreen] = useState("home")
+  //const [telaAtual, setTelaAtual] = useState("home")
   const [profileList, setProfileList] = useState({})
   const [match, setMatch] = useState(null)
 
@@ -16,7 +16,7 @@ function App() {
   }, [match])
 
   function RequestProfile() {
-    axios.get("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:maicon/person")
+    axios.get("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:maiconn/person")
       .then(response => {
         setProfileList(response.data.profile)
         console.log(response.data)
@@ -27,7 +27,7 @@ function App() {
   }
 
   function ChooseProfile(value) {
-    axios.post("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:maicon/choose-person", {
+    axios.post("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:maiconn/choose-person", {
       id: profileList.id,
       choice: value
     })
@@ -37,18 +37,13 @@ function App() {
       })
   }
 
-  //function trocarDeTela () {
-  //  setChangeScreen(changeScreen === 'home' ? 'matches' : 'home')
-  //}
+  
 
   return (
     <div className="App">
 
-
          <h1>AstroMatch</h1>
          
-
-
       <img src={profileList.photo} alt="Profile Img" /> <br />
         <br />
         {profileList.name} <br />
@@ -58,11 +53,9 @@ function App() {
 
       <button onClick={() => ChooseProfile(false)}>❌</button>
       <button onClick={() => ChooseProfile(true)}>❤️</button> 
+
       
       
-
-
-
     </div>
   );
 }
