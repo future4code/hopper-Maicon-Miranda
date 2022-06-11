@@ -5,11 +5,9 @@ import TelaMatches from './components/TelaMatches';
 
 function App() {
 
-
   //const [telaAtual, setTelaAtual] = useState("home")
   const [profileList, setProfileList] = useState({})
   const [match, setMatch] = useState(null)
-
 
   useEffect(() => {
     RequestProfile()
@@ -37,7 +35,21 @@ function App() {
       })
   }
 
-  
+  /*function MudarTela (nomeTela) {
+    setTelaAtual({telaAtual: nomeTela})
+  }
+
+  function TrocarTela() {
+    switch (setTelaAtual) {
+      case 'home':
+        return <App/>
+      case 'matches':
+        return <TelaMatches/>
+      default:
+        return <App/>
+    }
+  }
+*/
 
   return (
     <div className="App">
@@ -53,7 +65,7 @@ function App() {
 
       <button onClick={() => ChooseProfile(false)}>❌</button>
       <button onClick={() => ChooseProfile(true)}>❤️</button> 
-
+  
       
       
     </div>
