@@ -1,73 +1,23 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
 import './App.css';
+import React,{useState} from 'react';
 import TelaMatches from './components/TelaMatches';
+import TelaProfiles from './components/TelaProfiles';
+
 
 function App() {
 
-  //const [telaAtual, setTelaAtual] = useState("home")
-  const [profileList, setProfileList] = useState({})
-  const [match, setMatch] = useState(null)
+  const[changeScreen, setChangeScreen] = useState("profiles")
 
-  useEffect(() => {
-    RequestProfile()
-  }, [match])
-
-  function RequestProfile() {
-    axios.get("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:maiconn/person")
-      .then(response => {
-        setProfileList(response.data.profile)
-        console.log(response.data)
-      })
-      .catch(error => {
-        console.log('Erro', error.response.data)
-      })
-  }
-
-  function ChooseProfile(value) {
-    axios.post("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:maiconn/choose-person", {
-      id: profileList.id,
-      choice: value
-    })
-      .then((response) => {
-        setMatch(response.data.profile)
-        RequestProfile()
-      })
-  }
-
-  /*function MudarTela (nomeTela) {
-    setTelaAtual({telaAtual: nomeTela})
-  }
-
-  function TrocarTela() {
-    switch (setTelaAtual) {
-      case 'home':
-        return <App/>
-      case 'matches':
-        return <TelaMatches/>
-      default:
-        return <App/>
-    }
-  }
-*/
+  function mudarTela(){
+    setChangeScreen(changeScreen === "profiles" ? "matches" : "profiles") 
+ }
 
   return (
+
     <div className="App">
-
-         <h1>AstroMatch</h1>
-         
-      <img src={profileList.photo} alt="Profile Img" /> <br />
-        <br />
-        {profileList.name} <br />
-        {profileList.age} <br />
-        {profileList.bio} <br />
-        <br />
-
-      <button onClick={() => ChooseProfile(false)}>❌</button>
-      <button onClick={() => ChooseProfile(true)}>❤️</button> 
-  
-      
-      
+      {changeScreen === "profiles"? 
+      <TelaProfiles switch={mudarTela}/>: 
+      <TelaMatches switch={mudarTela}/>  }
     </div>
   );
 }
