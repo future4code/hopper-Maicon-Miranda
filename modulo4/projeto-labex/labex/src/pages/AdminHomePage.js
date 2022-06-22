@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
+import { useProtectedPage } from "../Hooks/UseProtectPage";
 
 const AdminHomePage = () => {
-
+  useProtectedPage();
+  
   const navigate = useNavigate();
 
     return (
@@ -15,4 +17,6 @@ const AdminHomePage = () => {
   };
   
   export default AdminHomePage;
+  
+
   

@@ -1,8 +1,11 @@
 import { useNavigate } from "react-router-dom";
+import { useProtectedPage } from "../Hooks/UseProtectPage";
 
 const CreateTripPage = () => {
+  useProtectedPage();
 
   const navigate = useNavigate();
+  
 
     return (
       <div>
