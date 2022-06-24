@@ -6,6 +6,9 @@ const AdminHomePage = () => {
   
   const navigate = useNavigate();
 
+
+  
+
     return (
       <div>
         <h1>Painel Administrativo</h1>
