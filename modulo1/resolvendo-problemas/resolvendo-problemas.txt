@@ -1,0 +1,22 @@
+Exercícios de fixação do conhecimento
+
+1. Ter Atenção no Enunciado: manter a calma, e ler com atenção. Tentar não se desesperar e focar 
+   no que a questão realmente pede.
+
+2. Retirar Informações Relevantes: se atentar a palavras chaves que possam dar dicas e um norte de 
+   como o problema deve ser solucionado. 
+
+3. Pensar Entradas e Saídas: ter em mente os dados que utilizaremos, o que será processado e o resultado
+   que se é esperado. 
+
+4. Fazer um Esquema Visual: colocar sua ideias em um papel, fazer desenhos e fluxogramas para melhor organizar
+   as ideias.
+
+5. Criar Código Feio: o importante em um primeiro momento é se preocupar em fazeer um código funcional por mais 
+   que não seja bonito. 
+
+6. Testar Força-Bruta: começar a estrutura do código em uma linguagem de fácil interpratação e entendimento
+   para começarmos a montar a lógica que estamos pensando. Depois do esqueleto, começamos a codar. 
+
+7. Refatorar: com o código pronto e funcional, é interassante dar um foco em melhorar certos aspectos do código. 
+   Desde a fazer nomes melhoress para as variáveis, até pensar em funções mais eficientes. 
