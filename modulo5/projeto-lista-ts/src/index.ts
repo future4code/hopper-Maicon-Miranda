@@ -21,3 +21,28 @@ tipoVariavel("Olá")
 
 */
 
+//EXERCÍCIO 03
+
+/*
+enum GENERO {
+	ACAO="ação",
+	DRAMA="drama",
+	COMEDIA="comédia",
+	ROMANCE="romance",
+	TERROR="terror"
+}
+
+function fichaTecnicaFilme (nome: string, ano: number, genero: GENERO, potuancao?: number) :any {
+	const filme = {
+		nome: nome,
+		ano: ano,
+		genero: genero,
+		potuancao: potuancao
+	}
+	return filme
+}
+
+console.log(fichaTecnicaFilme("Matrix", 1999, GENERO.ACAO, 73))
+
+*/
+
