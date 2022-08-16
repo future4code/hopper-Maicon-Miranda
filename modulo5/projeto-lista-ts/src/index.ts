@@ -14,7 +14,7 @@ console.log(`Olá me chamo ${nome}, nasci no dia ${dataFormatada[0]} do mês de 
 
 /*
 function tipoVariavel(input: any) :void {
-    console.log(typeof input)
+	console.log(typeof input)
 }
 
 tipoVariavel("Olá")
@@ -46,3 +46,38 @@ console.log(fichaTecnicaFilme("Matrix", 1999, GENERO.ACAO, 73))
 
 */
 
+//EXERCÍCIO 04
+
+/*
+type colaborador = {
+	nome: string,
+	salário: number,
+	setor: SETOR,
+	presencial: boolean
+}
+
+enum SETOR {
+	MARKETING = "marketing",
+	VENDAS = "vendas",
+	FINANCEIRO = "financeiro",
+}
+
+const funcionarios: colaborador[] = [
+
+	{ nome: "Marcos", salário: 2500, setor: SETOR.MARKETING, presencial: true },
+	{ nome: "Maria", salário: 1500, setor: SETOR.VENDAS, presencial: false },
+	{ nome: "Salete", salário: 2200, setor: SETOR.FINANCEIRO, presencial: true },
+	{ nome: "João", salário: 2800, setor: SETOR.MARKETING, presencial: false },
+	{ nome: "Josué", salário: 5500, setor: SETOR.FINANCEIRO, presencial: true },
+	{ nome: "Natalia", salário: 4700, setor: SETOR.VENDAS, presencial: true },
+	{ nome: "Paola", salário: 3500, setor: SETOR.MARKETING, presencial: true }
+
+]
+
+const filtraColaborador = funcionarios.filter((func) => {
+	return func.setor === "marketing" && func.presencial === true;
+})
+
+console.log(filtraColaborador)
+
+*/
