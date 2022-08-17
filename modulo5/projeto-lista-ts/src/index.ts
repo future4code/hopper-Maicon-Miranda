@@ -81,3 +81,37 @@ const filtraColaborador = funcionarios.filter((func) => {
 console.log(filtraColaborador)
 
 */
+
+//EXERCÍCIO 05
+
+/*
+type usuario = {
+	name :string, 
+	email :string,
+	role: string
+}
+
+const usuarios :usuario[] = [
+	{name: "Rogério", email: "roger@email.com", role: "user"},
+	{name: "Ademir", email: "ademir@email.com", role: "admin"},
+	{name: "Aline", email: "aline@email.com", role: "user"},
+	{name: "Jéssica", email: "jessica@email.com", role: "user"},  
+	{name: "Adilson", email: "adilson@email.com", role: "user"},  
+	{name: "Carina", email: "carina@email.com", role: "admin"}      
+] 
+
+
+const filtraUsuario = usuarios.filter(function(user){
+	return user.email && user.role ==="admin"
+ })
+
+
+const filtraEmail = filtraUsuario.map(function(e){
+	return e.email;
+ });
+
+ console.log(filtraEmail)
+
+ */
+
+ 
