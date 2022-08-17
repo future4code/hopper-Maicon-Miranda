@@ -114,4 +114,4 @@ const filtraEmail = filtraUsuario.map(function(e){
 
  */
 
- 
+ //EXERCÍCIO 6
