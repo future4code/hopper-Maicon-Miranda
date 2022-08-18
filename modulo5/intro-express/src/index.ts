@@ -22,16 +22,21 @@ app.get("/", (request :Request, response :Response) => {
 
 */
 
-//EXERCÍCIO 2
+//EXERCÍCIO 2 e 3
 
-/*
 
-type usuarios = {
-    id :string,
+type users = {
+    id :number,
     name :string,
     phone :number,
     email :string,
     website :string
 }
 
-*/
+
+const arrUsers :users[] = [
+    {id: 1, name: "Maicon", phone: 123456789, email: "maicon@miranda.com", website: "www.maiconmiranda.com.br"},
+    {id: 2, name: "Gisela", phone: 987654321, email: "gisela@miranda.com", website: "www.giselamiranda.com.br"},
+    {id: 3, name: "Catarina", phone: 123498765, email: "catarina@miranda.com", website: "www.catarinamiranda.com.br"},
+]
+
