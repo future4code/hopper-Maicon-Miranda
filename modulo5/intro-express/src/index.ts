@@ -21,3 +21,17 @@ app.get("/", (request :Request, response :Response) => {
 })
 
 */
+
+//EXERCÍCIO 2
+
+/*
+
+type usuarios = {
+    id :string,
+    name :string,
+    phone :number,
+    email :string,
+    website :string
+}
+
+*/
