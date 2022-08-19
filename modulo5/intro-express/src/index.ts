@@ -40,3 +40,10 @@ const arrUsers :users[] = [
     {id: 3, name: "Catarina", phone: 123498765, email: "catarina@miranda.com", website: "www.catarinamiranda.com.br"},
 ]
 
+//Exercício 4
+app.get("/users", (request: Request, response: Response) => {
+    const usuarios = arrUsers.map((user) => {
+        return user
+    })
+    response.status(200).send(usuarios)
+})
