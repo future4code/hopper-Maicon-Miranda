@@ -56,3 +56,14 @@ type posts = {
     body: string,
     userId: number
 }
+
+//Exercício 6
+
+const arrPosts :posts[] = [
+    { id: 1, title: "Post 1", body: "Olá", userId: 1},
+    { id: 2, title: "Post 2", body: "Oi", userId: 2},
+    { id: 3, title: "Post 3", body: "Iae", userId: 3}
+]
+
+//Prefiro fazer o array fora do array usuários. Para mim, fica menos confuso.
+
