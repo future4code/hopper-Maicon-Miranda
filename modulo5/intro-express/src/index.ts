@@ -11,18 +11,15 @@ app.listen(3003, () => {
 })
 
 
-//EXERCíCIO 1
-
-/*
+//Exercício 1
 
 app.get("/", (request :Request, response :Response) => {          
     console.log("Tudo ok!")
     response.send("Server is running in http://localhost:3003")
 })
 
-*/
 
-//EXERCÍCIO 2 e 3
+//Exercício 2
 
 
 type users = {
@@ -32,6 +29,8 @@ type users = {
     email: string,
     website: string
 }
+
+//Exercício 3
 
 
 const arrUsers: users[] = [
@@ -50,7 +49,7 @@ app.get("/users", (request: Request, response: Response) => {
 
 //Exercício 5
 
-type posts = {
+type postsType = {
     id: number,
     title: string,
     body: string,
@@ -59,7 +58,7 @@ type posts = {
 
 //Exercício 6
 
-const arrPosts :posts[] = [
+const postsArray :postsType[] = [
     { id: 1, title: "Post 1", body: "Olá", userId: 1},
     { id: 2, title: "Post 2", body: "Oi", userId: 2},
     { id: 3, title: "Post 3", body: "Iae", userId: 3}
@@ -67,3 +66,23 @@ const arrPosts :posts[] = [
 
 //Prefiro fazer o array fora do array usuários. Para mim, fica menos confuso.
 
+//Exercício 7
+
+app.get("/posts", (request: Request, response: Response) => {
+    const posts = postsArray.map((post) => {
+        return post
+    })
+
+    response.status(200).send(posts)
+})
+
+//Exercício 8
+
+app.get("/users/posts", (request: Request, response: Response) => {
+    const userId = request.query.id
+
+    if (!userId) {
+        response.status(400).send("Id obrigatório")
+    }
+
+})
