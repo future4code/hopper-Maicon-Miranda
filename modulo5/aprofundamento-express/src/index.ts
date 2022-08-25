@@ -1,5 +1,6 @@
 import express, { Request, Response } from "express"
 import cors from "cors"
+import { updateSourceFileNode } from "typescript"
 
 const app = express()
 
@@ -42,13 +43,40 @@ app.get('/todos', (request:Request, response:Response) => {
 
 app.post('/todos/create', (request: Request, response: Response) =>{
     
+    const newToDo: toDos = {
+        userId: request.body.userId,
+        id: request.body.id,
+        title: request.body.title,
+        completed: request.body.completed
+    }
+
+    toDosArray.push(newToDo)
     
+    response.status(200).send({ message: 'Tarefa criada com sucesso', toDosArray })
 })
 
 
+//Exercício 6
 
+app.patch('/todos/edit', (request: Request, response: Response) => {
 
+    const id = Number(request.params.id)
+    const editCompleted = request.body.completed
 
+    for (let toDos of toDosArray)
+        if( toDos.id === id ){
+            [...toDosArray, toDos.completed = editCompleted]
+        }
+        
+    response.status(200).send({ message:"Tarefa atualizada", toDosArray})
+})
+
+//Exercício 7
+
+app.delete('/todos', (request: Request, response: Response) => {
+
+    
+})
 
 
 
