@@ -5,6 +5,11 @@ export type Usuario = {
     nome: string,
     cpf: number,
     idade: number
+    // extrato: {
+    //     valor: number,
+    //     data: number | string,
+    //     descricao: string
+    // }
 }
 
 //2
@@ -23,7 +28,7 @@ export let usuarios :Usuario[] = [
     {
         nome: "Catarina Miranda",
         cpf: 12345987600,
-        idade: 1
+        idade: 18
     },
 
 ]
