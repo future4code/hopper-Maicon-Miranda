@@ -1,0 +1,12 @@
+ALTER TABLE Projetos
+DROP COLUMN title;
+
+ALTER TABLE Projetos
+CHANGE date dueDate VARCHAR(40) NOT NULL;
+
+ALTER TABLE Funcionarios
+MODIFY email VARCHAR(40) UNIQUE;
+
+DESCRIBE Funcionarios;
+
+DESCRIBE Projetos;
