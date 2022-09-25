@@ -6,7 +6,7 @@ export default async function postProduct(req: Request, res: Response): Promise<
     try {
         const {name, price, image_url} = req.body
 
-        const newUser = {
+        const newProduct = {
             id: Date.now(),
             name, 
             price, 
@@ -15,7 +15,7 @@ export default async function postProduct(req: Request, res: Response): Promise<
 
         await connection.raw(`
             INSERT INTO labecommerce_products(id, name, price, image_url)
-            VALUES("${newUser.id}", "${newUser.name}", "${newUser.price}", "${newUser.image_url}")
+            VALUES("${newProduct.id}", "${newProduct.name}", "${newProduct.price}", "${newProduct.image_url}")
         `)
 
         res.status(201).send("Product Created")
