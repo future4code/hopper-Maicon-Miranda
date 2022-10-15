@@ -9,7 +9,7 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
-    "author": "Maicon Miranda de Jesus",
+    "author": "Maicon Miranda",
     "license": "ISC",
     "dependencies": {
         "cors": "^2.8.5",
