@@ -6,3 +6,15 @@ Content-Type: application/json
     "email": "jim@dundermifflin.com",
     "password": "ilovepam"
 }
+
+###
+
+GET http://localhost:3003/all
+
+
+####
+
+DELETE http://localhost:3003/:id
+ 
+
+
