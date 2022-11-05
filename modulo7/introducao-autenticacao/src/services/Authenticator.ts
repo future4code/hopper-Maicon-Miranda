@@ -2,6 +2,10 @@ import * as jwt from "jsonwebtoken"
 import { Unauthorized } from "../error/customError";
 import { AuthenticationData } from "../model/user";
 
+//Exercício 2 a): Garante que o token chegará como uma string
+
+//Exercício 2 b)
+
 export class Authenticator {
     public generateToken = ({ id }: AuthenticationData): string => {
         const token = jwt.sign(

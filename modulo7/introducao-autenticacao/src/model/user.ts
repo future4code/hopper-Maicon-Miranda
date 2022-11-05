@@ -30,6 +30,8 @@ export interface EditUserInput {
    id: string
 }
 
+//Exercício 2 b)
+
 export type AuthenticationData = {
    id: string
 }
