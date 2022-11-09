@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "tsc && node ./build/index.js",
     "dev": "ts-node-dev src/index.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Maicon Miranda",
   "license": "ISC",
   "devDependencies": {
     "@types/cors": "^2.8.12",

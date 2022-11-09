@@ -1,4 +1,5 @@
 import { BaseDatabase } from "./BaseDatabase";
+import { User } from "../model/User";
 
 export class UserDatabase extends BaseDatabase {
   private static TABLE_NAME = "LABEFLIX_USER";
@@ -13,4 +14,23 @@ export class UserDatabase extends BaseDatabase {
       })
       .into(UserDatabase.TABLE_NAME);
   }
+
+  async get() {
+    try {
+
+      const users: User[] = [];
+      const result = await UserDatabase.connection().select('*').from(UserDatabase.TABLE_NAME);
+
+      for (let user of result) {
+        users.push(user);
+    }
+    return users;
+
+    } catch (error: any) {
+      throw new Error(error.sqlMessage || error.message)
+    }
+  }
+
+
+
 }
