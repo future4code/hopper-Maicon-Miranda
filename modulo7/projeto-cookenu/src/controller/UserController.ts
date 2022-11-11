@@ -51,14 +51,15 @@ export class UserController {
       const userBusiness = new UserBusiness()
       const user = await userBusiness.getUser(input)
 
-      const userData = {
-        id: user.id,
-        email: user.email
-      }
+      // const userData = {
+      //   id: user.id,
+      //   email: user.email
+      // }
 
 
       res.status(200).send({
         id: user.id,
+        nome: user.nome,
         email: user.email,
       });
 

@@ -86,7 +86,7 @@ export class UserBusiness {
   };
 
 
-  public getUser = async (input :GetUserDTO) => {
+  public getUser = async (input: GetUserDTO) => {
     try {
 
       const { token } = input

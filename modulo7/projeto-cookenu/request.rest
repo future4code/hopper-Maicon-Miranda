@@ -19,16 +19,5 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:3003/user/edit
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZiYmU1MTQ0LThlMzQtNDgyNi1iMGE3LTNiMmM4ZDk5MDlkOSIsImlhdCI6MTY2ODEyNDA0MiwiZXhwIjoxNjY4MTI3NjQyfQ.AifhbicaquK3oZmxV1TDSr3vRT2zJQjGg2prrfbFkEc
-Content-Type: application/json
-
-{
-    "name": "Harry Osbourne",
-    "nickname": "Duende"
-}
-
-###
-
 GET http://localhost:3003/user/profile
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZiYmU1MTQ0LThlMzQtNDgyNi1iMGE3LTNiMmM4ZDk5MDlkOSIsImlhdCI6MTY2ODEyODgzMSwiZXhwIjoxNjY4MTMyNDMxfQ.kZlCcLXhDagDYdrXEamSNl2cwqxPsPJSt5lSFCFwXq0
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI5NzI0OGFlLTdiZmItNDEwMC1hZjQ4LWE5ZmZhNzY2MDdhZSIsImlhdCI6MTY2ODIxMDY4NCwiZXhwIjoxNjY4MjE0Mjg0fQ.XVbuqwQEAcmvr8O3akjhqqePVx2FA5a7mcaDlX02_jw

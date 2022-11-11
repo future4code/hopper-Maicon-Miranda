@@ -32,9 +32,9 @@ export class UserDatabase extends BaseDatabase {
   public getUserById = async (id: string) => {
 
     try {
-      const result = await UserDatabase.connection("Auth_users")
+      const result = await UserDatabase.connection("Cookenu_users")
         .select("*")
-        .from("Auth_users")
+        .from("Cookenu_users")
         .where({ id });
 
       return result[0];
