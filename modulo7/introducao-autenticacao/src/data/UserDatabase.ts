@@ -30,14 +30,35 @@ export class UserDatabase extends BaseDatabase {
     }
   };
 
-  public findUserByEmail = async (email: string) => {
+  //Exercício 4 a)
+
+  public getUserByEmail = async (email: string) => {
     try {
       const result = await UserDatabase.connection("Auth_users")
-      .select().where({email})
-      
+        .select().where({ email })
+
       return result[0]
     } catch (error: any) {
       throw new CustomError(400, error.message);
     }
   };
+
+  //Exercício 7
+
+  public getUserById = async (id: string) => {
+
+    try {
+      const result = await UserDatabase.connection("Auth_users")
+        .select("*")
+        .from("Auth_users")
+        .where({ id });
+
+      return result[0];
+
+    } catch (error: any) {
+      throw new CustomError(400, error.message);
+    }
+
+  }
+
 }

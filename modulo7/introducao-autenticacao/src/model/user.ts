@@ -35,3 +35,9 @@ export interface EditUserInput {
 export type AuthenticationData = {
    id: string
 }
+
+
+
+export interface GetUserDTO {
+   token: string
+}

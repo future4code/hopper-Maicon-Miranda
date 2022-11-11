@@ -1,0 +1,35 @@
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+    "name": "Norman Osbourne",
+    "nickname": "Green Goblin", 
+    "email": "osbourne@oscorp.com",
+    "password": "ihatepeter"
+}
+
+###
+
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+    "email": "osbourne@oscorp.com",
+    "password": "ihatepeter"
+}
+
+###
+
+PUT http://localhost:3003/user/edit
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZiYmU1MTQ0LThlMzQtNDgyNi1iMGE3LTNiMmM4ZDk5MDlkOSIsImlhdCI6MTY2ODEyNDA0MiwiZXhwIjoxNjY4MTI3NjQyfQ.AifhbicaquK3oZmxV1TDSr3vRT2zJQjGg2prrfbFkEc
+Content-Type: application/json
+
+{
+    "name": "Harry Osbourne",
+    "nickname": "Duende"
+}
+
+###
+
+GET http://localhost:3003/user/profile
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZiYmU1MTQ0LThlMzQtNDgyNi1iMGE3LTNiMmM4ZDk5MDlkOSIsImlhdCI6MTY2ODEyODgzMSwiZXhwIjoxNjY4MTMyNDMxfQ.kZlCcLXhDagDYdrXEamSNl2cwqxPsPJSt5lSFCFwXq0
