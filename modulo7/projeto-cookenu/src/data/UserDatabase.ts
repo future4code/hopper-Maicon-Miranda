@@ -20,7 +20,7 @@ export class UserDatabase extends BaseDatabase {
 
   public getUserByEmail = async (email: string) => {
     try {
-      const result = await UserDatabase.connection("Auth_users")
+      const result = await UserDatabase.connection("Cookenu_users")
         .select().where({ email })
 
       return result[0]

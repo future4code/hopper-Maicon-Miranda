@@ -4,6 +4,7 @@ export class CustomError extends Error {
     }
 }
 
+
 export class InvalidName extends CustomError{ 
     constructor(){
         super(400, "Nome inválido")

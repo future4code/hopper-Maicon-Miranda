@@ -48,17 +48,19 @@ export class UserBusiness {
     }
   };
 
-  //Exercício 5 a)
-
   public login = async (input: LoginInputDTO) => {
     try {
       const { email, senha } = input;
 
+      if (!email && !senha) {
+        throw new CustomError(400,
+        'Preencha os campos "email" e "senha"'
+        );
+      }
+
       if (!senha) {
         throw new InvalidPassword()
       }
-
-      //Exercício 5 b)
 
       if (!email.includes("@") || !email) {
         throw new InvalidEmail();
@@ -71,7 +73,7 @@ export class UserBusiness {
         throw new UserNotFound()
       }
 
-      if(user.password !== senha) {
+      if(user.senha !== senha) {
         throw new InvalidPassword()
       }
 

@@ -13,8 +13,8 @@ POST http://localhost:3003/user/login
 Content-Type: application/json
 
 {
-    "email": "osbourne@oscorp.com",
-    "password": "ihatepeter"
+    "email": "Jacquin@masterchef.com",
+    "senha": "pombaeratoquevoa"
 }
 
 ###
