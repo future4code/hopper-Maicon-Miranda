@@ -1,10 +1,11 @@
 import { UserDatabase } from "../data/UserDatabase";
-import { CustomError, InvalidEmail, InvalidName, InvalidPassword, UserNotFound } from "../error/customError";
+import { CustomError, InvalidEmail, InvalidName, InvalidPassword, UserNotFound, Unauthorized } from "../error/customError";
 import {
   UserInputDTO,
   user,
   LoginInputDTO,
   GetUserDTO,
+  GetUserByIdDTO,
 } from "../model/user";
 import { Authenticator } from "../services/Authenticator";
 import { IdGenerator } from "../services/IdGenerator";
@@ -101,4 +102,21 @@ export class UserBusiness {
       throw new CustomError(400, error.message)
     }
   }
+
+  public getUserId = async (input: GetUserByIdDTO) => {
+    try {
+      
+      const { id } = input
+      //const { id } = authenticator.getTokenData(token)
+
+      const userDatabase = new UserDatabase();
+      const user = await userDatabase.getUserById(id)
+
+      return user
+
+    } catch (error: any) {
+      throw new CustomError(400, error.message)
+    }
+  }
+
 }

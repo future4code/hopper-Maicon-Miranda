@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { UserBusiness } from "../business/UserBusiness";
 import { UserDatabase } from "../data/UserDatabase";
-import { GetUserDTO, LoginInputDTO, UserInputDTO } from "../model/user";
+import { GetUserByIdDTO, GetUserDTO, LoginInputDTO, UserInputDTO } from "../model/user";
 
 export class UserController {
 
@@ -51,16 +51,10 @@ export class UserController {
       const userBusiness = new UserBusiness()
       const user = await userBusiness.getUser(input)
 
-      // const userData = {
-      //   id: user.id,
-      //   email: user.email
-      // }
-
-
       res.status(200).send({
         id: user.id,
         nome: user.nome,
-        email: user.email,
+        email: user.email
       });
 
 
@@ -69,12 +63,32 @@ export class UserController {
     }
   }
 
-}
-function getTokenData(token: string) {
-  throw new Error("Function not implemented.");
+  public getUserId = async (req: Request, res: Response) => {
+    try {
+      const input: GetUserByIdDTO = {
+        id: req.params.id,
+      }
+
+      const userBusiness = new UserBusiness()
+      const user = await userBusiness.getUserId(input)
+
+      res.status(200).send({
+        id: user.id,
+        nome: user.nome,
+        email: user.email
+      })
+
+    } catch (error: any) {
+      res.status(400).send(error.message);
+    }
+  }
+
+
+
 }
 
-function getUserById(id: any) {
-  throw new Error("Function not implemented.");
-}
+
+// function getUserById(id: any) {
+//   throw new Error("Function not implemented.");
+// }
 

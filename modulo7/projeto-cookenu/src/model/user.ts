@@ -23,3 +23,7 @@ export type AuthenticationData = {
 export interface GetUserDTO {
    token: string
 }
+
+export interface GetUserByIdDTO {
+   id: string
+}
