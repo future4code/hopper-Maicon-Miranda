@@ -50,6 +50,8 @@ export class UserBusiness {
 
       const id: string = idGenerator.generateId();
 
+      //Exercício 2 b)
+
       const hashPassword: string = await hashManager.hash(password);
 
       const user: user = {
@@ -87,6 +89,8 @@ export class UserBusiness {
       if (!user) {
         throw new UserNotFound();
       }
+
+      //Exercício 2 c)
 
       const isValidPassword: boolean = await hashManager.compare(
         password,
