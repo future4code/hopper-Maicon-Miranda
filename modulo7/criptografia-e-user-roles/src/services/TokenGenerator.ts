@@ -9,11 +9,12 @@ export class TokenGenerator {
     return token;
   };
 
-  public tokenData = (token: string): AuthenticationData => {
+  public tokenData /* tbm usada como getData */ = (token: string): AuthenticationData => {
     const payload = jwt.verify(
       token,
       process.env.JWT_KEY as string
     ) as jwt.JwtPayload;
+
 
     return { id: payload.id as string, role: payload.role as string };
   };

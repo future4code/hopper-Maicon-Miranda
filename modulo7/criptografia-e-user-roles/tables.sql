@@ -1,3 +1,4 @@
+-- Active: 1659483686265@@35.226.146.116@3306@Hopper-4314078-maicon-jesus
 
 CREATE TABLE IF NOT EXISTS Auth_users (
     id VARCHAR(64) PRIMARY KEY,
@@ -26,3 +27,4 @@ CREATE TABLE IF NOT EXISTS Auth_assignees (
     FOREIGN KEY (assignee_id) REFERENCES Auth_users(id)
 );
 
+ALTER TABLE Auth_users ADD COLUMN role VARCHAR(64) NOT NULL DEFAULT "NORMAL" 

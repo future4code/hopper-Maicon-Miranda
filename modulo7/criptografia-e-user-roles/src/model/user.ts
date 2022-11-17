@@ -38,6 +38,7 @@ export interface EditUserInput {
   id: string;
 }
 
+
 export interface AuthenticationData {
   id: string;
   role: string;

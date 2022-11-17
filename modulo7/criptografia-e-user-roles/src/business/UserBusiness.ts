@@ -50,8 +50,6 @@ export class UserBusiness {
 
       const id: string = idGenerator.generateId();
 
-      //Exercício 2 b)
-
       const hashPassword: string = await hashManager.hash(password);
 
       const user: user = {
@@ -90,8 +88,6 @@ export class UserBusiness {
         throw new UserNotFound();
       }
 
-      //Exercício 2 c)
-
       const isValidPassword: boolean = await hashManager.compare(
         password,
         user.password
@@ -121,7 +117,6 @@ export class UserBusiness {
       }
 
       const data = tokenGenerator.tokenData(token);
-      // requisição pro banco foi embora
 
       if (!data.id) {
         throw new Unauthorized();
