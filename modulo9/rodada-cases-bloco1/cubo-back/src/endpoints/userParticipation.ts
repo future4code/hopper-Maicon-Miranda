@@ -9,8 +9,13 @@ export const userParticipation = async (req: Request, res: Response) => {
         
 
         if( !name|| !lastname || !participation ){
-            throw new Error("Invalid")
+            ("Invalid")
         }
+
+        if(isNaN(participation)) {
+            throw new Error("The data informed is not a number");
+        }
+        
 
         const userDatabase = new UserDatabase()
 

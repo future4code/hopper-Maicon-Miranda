@@ -16,7 +16,14 @@ function Header() {
 
     const onSubmitForm = (event) => {
         event.preventDefault()
-        console.log(form)
+
+        if (isNaN(form.participation)) {
+            alert('The participation informed is not a number!')
+        }
+
+        
+
+        //console.log(form)
         
     }
 

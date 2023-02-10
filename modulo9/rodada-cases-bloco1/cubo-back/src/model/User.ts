@@ -3,7 +3,7 @@ export class User{
         private id: string,
         private name: string,
         private lastname: string,
-        private participation: string,
+        private participation: number,
     ) {
         this.id = id
         this.name = name
@@ -33,7 +33,7 @@ export class User{
     public setEmail(newLastName: string){
         this.lastname = newLastName
     }
-    public setParticipation(newParticipation: any){
+    public setParticipation(newParticipation: number){
         this.participation = newParticipation
     }
 }

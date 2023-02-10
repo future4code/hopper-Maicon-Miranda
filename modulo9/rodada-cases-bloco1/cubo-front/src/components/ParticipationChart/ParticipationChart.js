@@ -59,7 +59,11 @@ function ParticipationChart() {
                 width="100%"
                 height="280px"
 
-                //Tentativas de popular o gráfico com os dados vindos da API
+                //Tentativas de popular o gráfico com os dados vindos da API:
+
+                //Tentei com o Rodrigo em um plantão e não conseguimos. 
+
+                //Se o avaliador souber onde está o erro, por favor me dar o feedback.
 
                 // data={chartData.map((users) =>{
                 //     return ([
@@ -72,7 +76,7 @@ function ParticipationChart() {
                 //     ...chartData.map(users => [users.name, users.participation])
                 // ]}
 
-                data={data} 
+                data={data} //dataChart
                 options={options}
             
 
