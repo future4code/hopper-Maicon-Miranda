@@ -61,10 +61,6 @@ function ParticipationChart() {
 
                 //Tentativas de popular o gráfico com os dados vindos da API:
 
-                //Tentei com o Rodrigo em um plantão e não conseguimos. 
-
-                //Se o avaliador souber onde está o erro, por favor me dar o feedback.
-
                 // data={chartData.map((users) =>{
                 //     return ([
                 //         [{"name": users.name, "participation": users.participation }]
@@ -75,6 +71,12 @@ function ParticipationChart() {
                 //     ['users name', 'users participation'],
                 //     ...chartData.map(users => [users.name, users.participation])
                 // ]}
+
+                //Tentei com o Rodrigo e a Jéssica em um plantão e não conseguimos. 
+
+                //O gráfico está sendo populado com dados mocados. Linha 14.
+
+                //Se o avaliador souber onde está o erro, por favor me dar o feedback.
 
                 data={data} //dataChart
                 options={options}
