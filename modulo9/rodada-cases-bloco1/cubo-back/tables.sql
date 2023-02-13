@@ -1,8 +1,0 @@
--- Active: 1673907414320@@35.226.146.116@3306@Hopper-4314078-maicon-jesus
-
-CREATE TABLE CUBO(  
-    id VARCHAR(255) PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    lastname VARCHAR(255) NOT NULL,
-    participation VARCHAR(255) NOT NULL
-);
