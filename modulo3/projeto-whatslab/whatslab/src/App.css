@@ -1,8 +1,90 @@
-body {
-  background-color: black;
-  color: aliceblue;
-  display: flex;
-  justify-content: center;
-  margin: 2%;
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    
+}
+
+.box {
+    max-width: 600px;
+    height: 98vh;
+    border: 1px solid black;
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5px;
+    padding-bottom: 5px;
+    background: #efe7dd url("https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg") repeat
+}
+
+.box2 {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    padding: 20px;
+    background: #efe7dd url("https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg") repeat;
+
+}
+
+.box3 {
+    display: flex;
+}
+
+.inputUsuario {
+    width: 100px;
+    text-align: center;
+}
+
+.inputMensagem {
+    flex: 1 1 0%;
+    text-align:start
+}
+
+.enviar {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    flex: 0 0 auto;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 0;
+    position: relative;
+    outline: none;
+  }
   
+  .enviar .circle {
+    background: #008a7c;
+    border-radius: 50%;
+    font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+    position: relative;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .enviar .circle i {
+    
+    font-size: 24px;
+    margin-left: 5px;
+  }
+
+  /* .zmdi {
+    
+    display: inline-block;
+    font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+  } */
+
+ .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
 }
