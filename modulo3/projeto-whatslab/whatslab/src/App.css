@@ -1,90 +1,153 @@
-
-
 .container {
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background: url("https://personalmarketingdigital.com.br/wp-content/uploads/2018/05/background-whatsapp-7.jpg");
+  height: 100vh
 }
 
 .box {
-    max-width: 600px;
-    height: 98vh;
-    border: 1px solid black;
-    flex: 1 1 0%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1.5px;
-    padding-bottom: 5px;
-    background: #efe7dd url("https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg") repeat
+  max-width: 600px;
+  height: 98vh;
+  border: 1px solid black;
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  padding: 1.5px;
+  padding-bottom: 5px;
+  background: #efe7dd url("https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg") repeat
 }
 
 .box2 {
-    flex: 1 1 0%;
-    display: flex;
-    flex-direction: column;
-    -webkit-box-pack: end;
-    justify-content: flex-end;
-    padding: 20px;
-    background: #efe7dd url("https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg") repeat;
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column-reverse;
+  /* -webkit-box-pack: end; */
+  /* justify-content: flex-start; */
+  padding: 20px;
+  background: #efe7dd url("https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg") repeat;
 
 }
 
 .box3 {
-    display: flex;
+  display: flex;
 }
 
 .inputUsuario {
-    width: 100px;
-    text-align: center;
+  width: 100px;
+  /* text-align: start; */
+  border: none;
+  border-radius: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 1%;
+  padding-left: 4%;
+
 }
 
 .inputMensagem {
-    flex: 1 1 0%;
-    text-align:start
+  flex: 1 1 0%;
+  /* text-align: start; */
+  border: none;
+  border-radius: 5%;
+  margin-bottom: 1%;
+  padding-left: 3%;
 }
 
 .enviar {
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-    flex: 0 0 auto;
-    margin-left: 8px;
-    margin-right: 8px;
-    padding: 0;
-    position: relative;
-    outline: none;
-  }
-  
-  .enviar .circle {
-    background: #008a7c;
-    border-radius: 50%;
-    font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
-    position: relative;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .enviar .circle i {
-    
-    font-size: 24px;
-    margin-left: 5px;
-  }
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  flex: 0 0 auto;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 1%;
+  padding: 0;
+  position: relative;
+  outline: none;
+}
 
-  /* .zmdi {
+.enviar .circle {
+  background: #008a7c;
+  border-radius: 50%;
+  font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.enviar .circle i {
+
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+/* .zmdi {
     
     display: inline-block;
     font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
   } */
 
- .material-symbols-outlined {
+.balao-container-eu {
+  display: flex;
+  margin-left: 5px;
+  margin-right: 6px;
+  justify-content: end;
+  
+}
+
+.balao-mensagem-eu {
+  background-color: #DDF7C8;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  max-width: 60%;
+  min-width: 8%;
+  margin-bottom: 1em;
+  word-wrap: break-word;
+  padding: 0.6em 0.5em;
+  border-radius: 0.5em;
+  font-weight: 450;
+  line-height: 1.3;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.balao-container-outro {
+  display: flex;
+  margin-left: 5px;
+  margin-right: 6px;
+  justify-content: start;
+
+}
+
+.balao-mensagem-outro {
+  background-color: white;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  max-width: 60%;
+  min-width: 8%;
+  margin-bottom: 1em;
+  word-wrap: break-word;
+  padding: 0.6em 0.5em;
+  border-radius: 0.5em;
+  font-weight: 450;
+  line-height: 1.3;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+.material-symbols-outlined {
   font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+img {
+  padding-right: 25%;
+  padding-top: 10%;
 }
